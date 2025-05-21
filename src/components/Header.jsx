@@ -6,7 +6,7 @@ import '../assets/styles/header.scss';
 function Header() {
   return (
     <header >
-      <Navbar bg="#ffe3c2" variant="#ffe3c2">
+      <Navbar style={{ backgroundColor: '#f4e2d8' }} variant="light">
       <Container>
       <Navbar.Brand href="/">
         <img src={logo} alt="..." className="logo" />

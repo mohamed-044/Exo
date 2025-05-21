@@ -1,29 +1,4 @@
-.dish-card {
-  width: 280px;
-  padding: 16px;
-  border: 1px solid #ccc;
-  border-radius: 10px;
-  text-align: center;
-  background: #fff;
-
-  img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-  }
-
-  h2 {
-    font-size: 18px;
-    margin: 8px 0;
-  }
-
-  p {
-    color: #444;
-    font-size: 16px;
-    margin: 6px 0;
-  }
-
-  .badge-container {
-    margin-top: 8px;
-  }
+.dish-card img {
+  height: 250px;
+  object-fit: cover;
 }

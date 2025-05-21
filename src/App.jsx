@@ -1,7 +1,8 @@
+import { Container, Row, Col } from 'react-bootstrap';
 import Dish from "./components/Dish.jsx";
 import Footer from "./components/Footer.jsx";
 import Header from "./components/Header.jsx";
-import './assets/styles/main.scss';
+import './assets/styles/app.scss';
 
 function App() {
   const dishes = [
@@ -28,17 +29,20 @@ function App() {
   return (
     <>
       <Header />
-      <main className="dish-list">
-        {dishes.map((dish, index) => (
-          <Dish
-            key={index}
-            title={dish.title}
-            image={dish.image}
-            price={dish.price}
-            isNew={dish.isNew}
-          />
-        ))}
-      </main>
+       <Container as="main" className="dish-list">
+          <Row>
+          {dishes.map((dish, index) => (
+            <Col key={index} md={4}>
+              <Dish
+                title={dish.title}
+                image={dish.image}
+                price={dish.price}
+                isNew={dish.isNew}
+              />
+            </Col>
+          ))}
+        </Row>
+      </Container>
       <Footer />
     </>
   );

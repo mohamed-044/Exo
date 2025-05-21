@@ -1,15 +1,4 @@
-$navbar-color: #ffe4c4;
-header {
-  background-color: $navbar-color;
-  justify-content: space-evenly;
-  display : flex;
+img {
+  width: 50px;
+  height: 50px;
 }
-nav {
-  display :flex;
-}
-
-.logo {
-    width: 50px;
-    height: 50px;
-    margin: 10px;
-  }

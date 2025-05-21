@@ -6,6 +6,7 @@ import './assets/styles/app.scss';
 
 
 function App() {
+  const handleClick = (message) => alert(message)
   const dishes = [
     {
       title: "Tacos à l’unité",
@@ -45,6 +46,7 @@ function App() {
                 price={dish.price}
                 isNew={dish.isNew}
               />
+              <button onClick={() => handleClick(`${dish.title} ajouté au panier`)}>Ajouter au panier</button>
             </Col>
           ))}
         </Row>

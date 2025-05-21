@@ -1,5 +1,6 @@
 import Card from 'react-bootstrap/Card';
 import Badge from 'react-bootstrap/Badge';
+import Button from 'react-bootstrap/Button';
 import '../assets/styles/dish.scss';
 
 function Dish({ image, title, price, isNew }) {
@@ -18,7 +19,7 @@ function Dish({ image, title, price, isNew }) {
       <Card.Body>
         <Card.Title>{title}</Card.Title>
         <Card.Text>{price} €</Card.Text>
-        <button type="button" className="btn btn-dark" onClick={() => handleClick(`${title} ajouté au panier`)}>Ajouter au panier</button>
+        <Button variant="primary" onClick={() => handleClick(`${title} ajouté au panier`)}>Ajouter au panier</Button>
       </Card.Body>
     </Card>
   );

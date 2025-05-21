@@ -4,7 +4,7 @@ import '../assets/styles/dish.scss';
 
 function Dish({ image, title, price, isNew }) {
   return (
-    <Card className="dish-card position-relative">
+    <Card className="position-relative">
       <Card.Img src={image} alt={title} />
       {isNew && (
         <Badge

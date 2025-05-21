@@ -4,6 +4,7 @@ import Footer from "./components/Footer.jsx";
 import Header from "./components/Header.jsx";
 import './assets/styles/app.scss';
 
+
 function App() {
   const dishes = [
     {
@@ -29,7 +30,7 @@ function App() {
   return (
     <>
       <Header />
-       <Container as="main" className="dish-list">
+       <Container as="main">
           <Row>
           {dishes.map((dish, index) => (
             <Col key={index} md={4}>

@@ -6,14 +6,17 @@ import '../assets/styles/header.scss';
 function Header() {
   return (
     <header >
-      <Navbar style={{ backgroundColor: '#f4e2d8' }} variant="light">
+      <Navbar >
       <Container>
       <Navbar.Brand href="/">
         <img src={logo} alt="..." className="logo" />
       </Navbar.Brand>
+      <Navbar.Toggle aria-controls="main-navbar" />
+      <Navbar.Collapse id="main-navbar">
       <Nav className="ms-auto">
         <Nav.Link href="/">Accueil</Nav.Link>
       </Nav>
+      </Navbar.Collapse>
     </Container>
       </Navbar>
     </header>

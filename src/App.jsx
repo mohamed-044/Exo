@@ -30,7 +30,7 @@ function App() {
     },
   ];
 
-  const filteredDishes = dishes.filter(dish => dish.inStock)
+  const filteredDishes = dishes.filter(dish => dish.inStock > 0)
 
   return (
     <>

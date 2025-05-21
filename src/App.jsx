@@ -36,12 +36,11 @@ function App() {
   const [showNewOnly, setShowNewOnly] = useState(false);
 
   const handleShowNewOnly = () => {
-    setShowNewOnly(!showNewOnly);
+    setShowNewOnly(prevState => !prevState);
   };
 
   const filteredDishes = dishes
-    .filter(dish => dish.inStock > 0)
-    .filter(dish => !showNewOnly || dish.isNew);
+    .filter(dish => dish.inStock > 0 && (!showNewOnly || dish.isNew))
   return (
     <>
       <Header />

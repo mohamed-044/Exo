@@ -12,27 +12,32 @@ function App() {
       image: "https://cdn.pixabay.com/photo/2016/08/23/08/53/tacos-1613795_960_720.jpg",
       price: 3,
       isNew: true,
+      inStock : true,
     },
     {
       title: "Enchiladas",
       image: "https://cdn.pixabay.com/photo/2014/01/14/22/13/mexican-245240_960_720.jpg",
       price: 12,
       isNew: false,
+      inStock : true,
     },
     {
       title: "Mole poblano",
       image: "https://cdn.pixabay.com/photo/2021/02/04/03/57/mole-5980185_960_720.jpg",
       price: 15,
       isNew: false,
+      inStock : false,
     },
   ];
+
+  const filteredDishes = dishes.filter(dish => dish.inStock)
 
   return (
     <>
       <Header />
        <Container as="main">
           <Row>
-          {dishes.map((dish, index) => (
+          {filteredDishes.map((dish, index) => (
             <Col key={index} md={4}>
               <Dish
                 title={dish.title}

@@ -23,8 +23,8 @@ function Dish({ image, title, price, isNew}) {
       <Card.Body>
         <Card.Title>{title}</Card.Title>
         <Card.Text>{price} €</Card.Text>
-        <Button variant="primary"  className="m-2" onClick={() => addToCart({ type: "increment"})} >Ajouter au panier</Button>
-        <Button variant="primary" onClick={() => removeFromCart({ type: "decrement"})} >Retirer du panier</Button>
+        <Button variant="primary"  className="m-2" onClick={() => addToCart()} >Ajouter au panier</Button>
+        <Button variant="primary" onClick={() => removeFromCart()} >Retirer du panier</Button>
       </Card.Body>
     </Card>
   );

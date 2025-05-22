@@ -4,7 +4,7 @@ import Container from 'react-bootstrap/Container';
 import logo from '../assets/logo.webp';
 import '../assets/styles/header.scss';
 import { useContext } from 'react';
-import { CartContext } from './CartContext';
+import { CartContext } from '../context/CartContext';
 
 const Header = () => {
   const {cartCount} =useContext(CartContext);

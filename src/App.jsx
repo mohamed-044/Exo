@@ -4,12 +4,12 @@ import Dish from "./components/Dish.jsx";
 import Footer from "./components/Footer.jsx";
 import Header from "./components/Header.jsx";
 import './assets/styles/app.scss';
-import { useContext, useState } from 'react';
-import { CartContext } from './components/CartContext.jsx';
+import useState from 'react';
+
 
 
 function App() {
-  const {addToCart} =useContext(CartContext)
+
 
   const dishes = [
     {
@@ -59,7 +59,6 @@ function App() {
                 image={dish.image}
                 price={dish.price}
                 isNew={dish.isNew}
-                onAddToCart={addToCart}
               />
             </Col>
           ))}

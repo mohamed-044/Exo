@@ -4,14 +4,13 @@ import Dish from "./components/Dish.jsx";
 import Footer from "./components/Footer.jsx";
 import Header from "./components/Header.jsx";
 import './assets/styles/app.scss';
-import {useContext, useState } from 'react';
+import { useState } from 'react';
 import { useRef, useEffect } from "react";
-import { CartContext } from './context/CartContext.jsx';
-
+import useCart from './hooks/UseCart.jsx';
 
 
 function App() {
-    const {cartCount} = useContext(CartContext);
+    const {cartCount} = useCart();
     const prevCartCountRef = useRef(cartCount);
 
     useEffect(() => {

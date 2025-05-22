@@ -4,10 +4,12 @@ import Dish from "./components/Dish.jsx";
 import Footer from "./components/Footer.jsx";
 import Header from "./components/Header.jsx";
 import './assets/styles/app.scss';
-import { useState } from 'react';
+import { useContext, useState } from 'react';
+import { CartContext } from './components/CartContext.jsx';
 
 
 function App() {
+  const {addToCart} =useContext(CartContext)
 
   const dishes = [
     {
@@ -34,21 +36,19 @@ function App() {
   ];
 
   const [showNewOnly, setShowNewOnly] = useState(false);
-  const [cartCount, setCartCount] = useState(0);
+
 
   const handleShowNewOnly = () => {
     setShowNewOnly(prevState => !prevState);
   };
 
-  const addToCart = () => {
-    setCartCount(prev => prev + 1)
-  };
+ 
 
   const filteredDishes = dishes
     .filter(dish => dish.inStock > 0 && (!showNewOnly || dish.isNew))
   return (
     <>
-      <Header cartCount={cartCount}/>
+      <Header/>
        <Container as="main">
           <Button variant="primary" onClick={handleShowNewOnly}>{showNewOnly ? "Voir tout les plats" : "Nouveautés uniquement"}</Button>
           <Row>

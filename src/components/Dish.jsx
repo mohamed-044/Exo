@@ -9,10 +9,7 @@ import { useContext } from 'react';
 
 function Dish({ image, title, price, isNew}) {
   const {addToCart} =useContext(CartContext)
-  const onAddToCart = () => {
-    alert(`${title} ajouté au panier`);
-    addToCart();
-  };
+
   return (
     <Card className="position-relative">
       <Card.Img src={image} alt={title} />
@@ -27,7 +24,7 @@ function Dish({ image, title, price, isNew}) {
       <Card.Body>
         <Card.Title>{title}</Card.Title>
         <Card.Text>{price} €</Card.Text>
-        <Button variant="primary" onClick={() => onAddToCart() } >Ajouter au panier</Button>
+        <Button variant="primary" onClick={() => addToCart() } >Ajouter au panier</Button>
       </Card.Body>
     </Card>
   );

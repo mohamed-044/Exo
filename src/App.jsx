@@ -4,7 +4,7 @@ import Dish from "./components/Dish.jsx";
 import Footer from "./components/Footer.jsx";
 import Header from "./components/Header.jsx";
 import './assets/styles/app.scss';
-import useState from 'react';
+import {useState } from 'react';
 
 
 

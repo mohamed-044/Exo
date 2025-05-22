@@ -3,7 +3,7 @@ import Badge from 'react-bootstrap/Badge';
 import Button from 'react-bootstrap/Button';
 import '../assets/styles/dish.scss';
 import { CartContext } from '../context/CartContext.jsx';
-import useContext from 'react';
+import { useContext } from 'react';
 
 
 

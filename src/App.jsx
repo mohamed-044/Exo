@@ -4,12 +4,20 @@ import Dish from "./components/Dish.jsx";
 import Footer from "./components/Footer.jsx";
 import Header from "./components/Header.jsx";
 import './assets/styles/app.scss';
-import {useState } from 'react';
+import {useContext, useState } from 'react';
+import { useRef, useEffect } from "react";
+import { CartContext } from './context/CartContext.jsx';
 
 
 
 function App() {
+    const {cartCount} = useContext(CartContext);
+    const prevCartCountRef = useRef(cartCount);
 
+    useEffect(() => {
+      prevCartCountRef.current = cartCount;
+    }, [cartCount]);
+  
 
   const dishes = [
     {
@@ -61,8 +69,10 @@ function App() {
                 isNew={dish.isNew}
               />
             </Col>
+            
           ))}
         </Row>
+        <p>Le panier est passé de {prevCartCountRef.current} articles à {cartCount} articles</p>
       </Container>
       <Footer />
     </>

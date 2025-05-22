@@ -7,7 +7,7 @@ import { useContext } from 'react';
 import { CartContext } from './CartContext';
 
 const Header = () => {
-  const {cartCount, addToCart} =useContext(CartContext);
+  const {cartCount} =useContext(CartContext);
   return (
     <header >
       <Navbar >

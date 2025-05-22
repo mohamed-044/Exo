@@ -8,7 +8,7 @@ import { useContext } from 'react';
 
 
 function Dish({ image, title, price, isNew}) {
-  const {addToCart} =useContext(CartContext)
+  const {dispatch} = useContext(CartContext);
 
   return (
     <Card className="position-relative">
@@ -24,7 +24,8 @@ function Dish({ image, title, price, isNew}) {
       <Card.Body>
         <Card.Title>{title}</Card.Title>
         <Card.Text>{price} €</Card.Text>
-        <Button variant="primary" onClick={() => addToCart() } >Ajouter au panier</Button>
+        <Button variant="primary"  className="m-2" onClick={() => dispatch({ type: "increment"})} >Ajouter au panier</Button>
+        <Button variant="primary" onClick={() => dispatch({ type: "decrement"})} >Retirer du panier</Button>
       </Card.Body>
     </Card>
   );
